@@ -5,6 +5,7 @@ from statsmodels.tsa.arima.model import ARIMA, ARIMAResultsWrapper
 from os import environ, getenv
 from .logger import logger
 
+
 def discover_model() -> pathlib.Path:
     """discover joblib file from environment variable, SM_MODEL_DIR
     
