@@ -1,3 +1,10 @@
 {
-    "notebook.output.scrolling": true
+    "notebook.output.scrolling": true, 
+    "python.testing.pytestEnabled": true, 
+    "python.testing.pytestArgs": [
+        "-v", "--capture=tee-sys"
+    ], 
+    "files.autoSave": "afterDelay", 
+    "files.autoSaveDelay": 1000, 
+    "python.envFile": "${workspaceFolder}/pythonpath.env"
 }
