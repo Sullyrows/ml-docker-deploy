@@ -6,7 +6,7 @@ from os import environ, getenv
 from .logger import logger
 
 
-def load_model(model_path: str) -> pd.DataFrame:
+def load_model(model_path: str = None) -> pd.DataFrame:
     """load model from path 
     
     Args: 

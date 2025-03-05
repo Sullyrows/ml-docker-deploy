@@ -8,4 +8,7 @@ formatter = logging.Formatter(
     '%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
     datefmt='%H:%M:%S'
 )
-logger.setFormatter(formatter)
+# create console handler and set formatter
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
