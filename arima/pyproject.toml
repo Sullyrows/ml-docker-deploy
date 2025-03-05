@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "arima"
+version = "0.1.0"
+description = ""
+authors = ["Joe Sullivan  <Sullyrows@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
