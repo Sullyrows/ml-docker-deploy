@@ -26,20 +26,20 @@ class Model:
     def predict(
         self, 
         data: pd.DataFrame | str, 
-        data_format: Literal["csv", "pandas"] = "pandas"
+        data_format: Literal["csv", "pandas", "json"] = "pandas"
     ) -> pd.DataFrame | str:
         """predict using ARIMA model
         
         Args: 
             data (pd.DataFrame, str): data to predict on
-            data_format (Literal["csv", "pandas"]): format of data to return
+            data_format (Literal["csv", "pandas", "json"]): format of data to return
         """
         if data.shape == (1,1) and "steps" in data.columns: 
             logger.info("Using steps for predictions of ARIMA")
-            steps = data["steps"].values[0]
+            steps = int(data["steps"].values[0])
         else: 
             logger.info(f"Using data for predictions ({len(data.index)} rows)")
-            steps = len(data.index)
+            steps = int(len(data.index))
         
         data = self.model.forecast(steps=steps)
         data.index.name = "date"

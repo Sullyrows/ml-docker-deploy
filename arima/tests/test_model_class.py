@@ -25,6 +25,7 @@ class Test_Model:
     @pytest.mark.parametrize("payload", data_sets)
     def test_predict_csv(self, payload: pd.DataFrame, my_model: Model): 
         """test predict method with csv output"""
+        # test that model can predict
         predictions = my_model.predict(payload, data_format="csv")
         
         # assert that prediction can be readable 

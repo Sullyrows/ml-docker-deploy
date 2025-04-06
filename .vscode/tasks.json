@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compose Docker",
+            "label": "Start ARIMA Server",
             "type": "shell",
             "command": "bash",
             "args": [
